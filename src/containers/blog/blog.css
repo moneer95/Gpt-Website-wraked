@@ -1,0 +1,35 @@
+.blog {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        'ar1 ar2 ar3'
+        'ar1 ar4 ar5';
+}
+
+.blog:nth-child(1) {
+    grid-area: ar1;
+}
+.blog:nth-child(2) {
+    grid-area: ar2;
+}
+.blog:nth-child(3) {
+    grid-area: ar3;
+}
+.blog:nth-child(4) {
+    grid-area: ar4;
+}
+.blog:nth-child(5) {
+    grid-area: ar5;
+}
+
+@media(max-width:57rem) {
+    .blog {
+        grid-template-areas: 
+        'ar1'
+        'ar2'
+        'ar3'
+        'ar4'
+        'ar5';
+    }
+
+}

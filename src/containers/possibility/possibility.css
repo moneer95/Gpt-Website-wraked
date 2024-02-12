@@ -1,0 +1,26 @@
+.possibility {
+    display: grid;
+    grid-template-areas: 
+        ' description image';
+    align-items: center;
+    justify-items: center;
+}
+
+.possibility > img {
+    grid-area: image;
+    width: 50%;
+    position: relative;
+    opacity: .55 ;
+}
+
+.description {
+    grid-area: description;
+    max-width: 40ch;
+    position: absolute;
+}
+
+.description h3 {
+    font-size: var(--fs-900);
+    margin-bottom: 2rem;
+    cursor: pointer;
+}

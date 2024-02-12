@@ -1,0 +1,124 @@
+
+.navbar {
+    display: grid;
+    padding-block: 2.5rem;
+    grid-template-columns: minmax(.1rem, 4rem) 4rem minmax(.1rem, 2.5rem) minmax(25rem, 35rem)  minmax(1rem, 25rem) 15rem minmax(.1rem, 8rem);
+    font-size: var(--fs-400);
+    align-items: center;
+}
+
+.navbar--logo {
+    grid-column: 2;
+}
+
+.navbar--links {
+    color: white;
+    font-family: var(--font-family);
+    grid-column: 4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar--buttons {
+    grid-column: 6;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar--buttons--sign-in {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.navbar--buttons--sign-up {
+    background-color: #ff2f00;
+    width: 152px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.navbar--links-mobile {
+    flex-direction: column;
+    color: white;
+    align-items: flex-end;
+    font-family: var(--font-family);
+    background: rgba(255, 255, 255, 0.15); /* Adjust the alpha channel for transparency */
+    backdrop-filter: blur(10px); /* Adjust the blur intensity */
+    border-radius: 10px;
+    padding: 20px 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 10rem;
+    gap: 1rem;
+    position: absolute;
+    top: 8rem;
+    right: 1rem;
+    display: none ;
+}
+
+.riCloseLine {
+    display: none;
+}
+
+.riMenu3Line {
+    display: none;
+}
+
+@media (max-width: 57rem) {
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .navbar--logo {
+        grid-column: 3;
+    }
+
+    .navbar--links-mobile {
+        display: flex;
+    }
+    
+    .navbar--links {
+        display: none;
+    }
+
+    .navbar--buttons {
+        grid-column: 25;
+        order: 2;
+        justify-content: flex-end;
+        flex: .7;
+    }
+
+    .riCloseLine {
+        display: block;
+        order: 3;
+    }
+    
+    .riMenu3Line {
+        display: block;
+        order: 3;
+    }
+}
+
+@media (max-width: 37rem) {
+    .navbar--buttons--sign-up {
+        display: none;
+    }
+
+    .navbar--buttons--sign-in {
+        background-color: #ff2f00;
+        width: 152px;
+        height: 58px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        color: white;
+        font-size: 1.2rem;
+    }
+}

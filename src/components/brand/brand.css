@@ -1,0 +1,21 @@
+.header--companies {
+    display: flex;
+    grid-area: companies;
+    margin-top: 2rem;
+    gap: 3rem;
+    justify-content: center;
+}
+
+@media(max-width: 50rem) {
+
+    .header--companies {
+        margin-top: 2rem;
+        gap: 1rem;
+        max-width: 80%;
+        display: block;
+    }
+
+    .header--companies > * {
+        margin: .5rem 1rem;
+    }
+}
